@@ -1,0 +1,140 @@
+{
+    "title": "All Tools",
+    "children": [{
+        "linkText": "Account",
+        "key": "accountLvlTools",
+        "directive": "rx-account-search",
+        "childVisibilityParam": "accountNumber",
+        "children": [
+            {
+                "href": "/accounts/{{accountNumber}}",
+                "key": "accountOverview",
+                "linkText": "Overview"
+            },
+            {
+                "linkText": "Billing",
+                "key": "accountBilling",
+                "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
+                "childVisibilityParam": "accountNumber",
+                "children": [
+                    {
+                        "href": "/billing/overview/{{accountNumber}}",
+                        "key": "accountBillingOverview",
+                        "linkText": "Overview"
+                    }, {
+                        "href": "/billing/transactions/{{accountNumber}}",
+                        "key": "accountBillingTransactions",
+                        "linkText": "Transactions"
+                    }, {
+                        "href": "/billing/usage/{{accountNumber}}",
+                        "key": "accountBillingCurrentUsage",
+                        "linkText": "Current Usage"
+                    }, {
+                        "href": "/billing/payment/{{accountNumber}}/options",
+                        "key": "accountBillingPaymentOptions",
+                        "linkText": "Payment Options"
+                    }, {
+                        "href": "/billing/purchase-orders/{{accountNumber}}",
+                        "key": "accountBillingPurchaseOrders",
+                        "linkText": "Purchase Orders"
+                    }, {
+                        "href": "/billing/preferences/{{accountNumber}}",
+                        "key": "accountBillingPreferences",
+                        "linkText": "Preferences"
+                    }
+                ]
+            }, {
+                "href": "/support/accounts/{{accountNumber}}",
+                "linkText": "Support Details",
+                "key": "accountSupport"
+            }
+        ]
+    },
+    {
+        "linkText": "Billing",
+        "key": "billing",
+        "directive": "rx-billing-search",
+        "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)"
+    },
+    {
+        "linkText": "Cloud",
+        "key": "cloud",
+        "directive": "rx-atlas-search",
+        "childVisibilityParam": "user",
+        "childHeader": "<strong class='current-search'>Current Account:</strong><span class='current-result'>{{route.current.pathParams.user}}</span>",
+        "children": [
+            {
+                "href": "/cloud/{{user}}/servers",
+                "linkText": "Cloud Servers",
+                "children": [
+                    {
+                        "href": "/cloud/{{user}}/servers",
+                        "linkText": "Servers"
+                    }, {
+                        "href": "/cloud/{{user}}/images",
+                        "linkText": "Images"
+                    }
+                ]
+            },
+            {
+                "href": "/cloud/{{user}}/cbs/volumes",
+                "linkText": "Block Storage",
+                "children": [
+                    {
+                        "href": "/cloud/{{user}}/cbs/volumes",
+                        "linkText": "Volumes"
+                    }, {
+                        "href": "/cloud/{{user}}/cbs/snapshots",
+                        "linkText": "Snapshots"
+                    }
+                ]
+            }, {
+                "href": "/cloud/{{user}}/databases/instances",
+                "linkText": "Databases"
+            }, {
+                "href": "/cloud/{{user}}/loadbalancers",
+                "linkText": "Load Balancers"
+            }, {
+                "href": "/cloud/{{user}}/networks",
+                "linkText": "Networks"
+            }
+        ]
+    }, {
+        "href": "/support",
+        "linkText": "Support Service",
+        "key": "supportService",
+        "directive": "rx-support-service-search"
+    }, {
+        "href": "/ticketing",
+        "linkText": "Ticketing",
+        "key": "ticketing",
+        "children": [
+            {
+                "href": "/ticketing/list",
+                "linkText": "My Selected Queues"
+            },
+            {
+                "href": "/ticketing/my",
+                "linkText": "My Tickets"
+            }, {
+                "href": "/ticketing/queues",
+                "linkText": "Queue Admin"
+            }
+        ]
+    }, {
+        "href": "/virt",
+        "linkText": "Virtualization Admin",
+        "key": "virt",
+        "directive": "rx-virt-search"
+    }, {
+        "linkText": "Support Automation",
+        "key": "supportAutomation",
+        "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
+        "children": [
+            {
+                "href": "/dcx/windows-cluster-build/validate",
+                "linkText": "Windows Cluster Build"
+            }
+        ]
+    }]
+}

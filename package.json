@@ -1,0 +1,8 @@
+{
+    "author": "",
+    "name": "encore-ui-nav",
+    "homepage": "https://github.com/rackerlabs/encore-ui-nav",
+    "devDependencies": {
+        "jsonlint": "~1.6.2"
+    }
+}
