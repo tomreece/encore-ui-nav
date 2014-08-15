@@ -8,9 +8,9 @@ script:
 before_deploy: cd src
 deploy:
   provider: cloudfiles
-  username: encorecloudfiles
-  region: DFW
-  container: encore-ui-nav
+  username: "encorecloudfiles"
+  region: "DFW"
+  container: "encore-ui-nav"
   skip_cleanup: true
   on:
     branch: master
