@@ -19,20 +19,3 @@ results
 
 # 3rd-party dependencies
 /node_modules/
-/demo/bower_components
-/demo/readme.html
-
-# config file with secrets
-/localConfig.js
-
-# generated files/folders on build
-/coverage/
-/templates/
-/index.js
-/build/
-/bower/
-/dist/
-
-# wraith screenshots
-/wraith/shots/
-/wraith/tmp/
