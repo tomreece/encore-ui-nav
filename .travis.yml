@@ -4,15 +4,15 @@ node_js:
 before_install: npm install -g jsonlint
 script:
 - jsonlint -q src/encoreNav.json
-
 before_deploy: cd src
 deploy:
   provider: cloudfiles
-  username: "encorecloudfiles"
-  region: "DFW"
-  container: "encore-ui-nav"
+  username: encorecloudfiles
+  api_key:
+    secure: fxJyUdU/31MnrCZx1iz8ru/8Vu3HGSzsTNCuGwJetipXpToD1nEPwpeqdV5xcXi8LhFg36UWRye5RSji2RcHlxIKGJW+grGnOz1/KOAKMH4FyAg+Z+H3sZUJcFKRBWHLbIacE1n4xSkpnO5XRLba13JOIutvhLs7QuvxQm1eV7o=
+  region: DFW
+  container: encore-ui-nav
   skip_cleanup: true
   on:
+    repo: rackerlabs/encore-ui-nav
     branch: master
-  api-key:
-    secure: LlV1jh0UtrjqXoJjwdxwB083PFDoPGSBRijCmI9BfU95hMHbaVAM0g6jxQBVqmD7VqwYH59X6aUCDBPEUKd24mLOD4ySLAr708pvUTgwblyxZl/XBpj7LaR6MME2Kp+v70J4rwy/TB7gsdxeYDahPpI6mrJ9+TX3Wfa9bgzx47s=
