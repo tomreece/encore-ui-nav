@@ -1,4 +1,4 @@
-{
+[{
     "title": "All Tools",
     "children": [{
         "linkText": "Account",
@@ -137,4 +137,4 @@
             }
         ]
     }]
-}
+}]
