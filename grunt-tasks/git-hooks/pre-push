@@ -1,0 +1,79 @@
+#!/usr/bin/env ruby
+
+# Read this blog to know more about this script.
+#
+# http://blog.bigbinary.com/2013/09/19/do-not-allow-force-pusht-to-master.html
+
+class PrePushHandler
+
+  def handle
+    reject_forcepush if disallowed_branch? && forced_push? 
+    reject_bad_default if bad_push_default?
+  end
+
+  private
+
+  def disallowed_branch?
+    current_branch == 'master' or current_branch == 'staging'
+  end
+
+  def allowed_push_defaults
+    ["nothing", "upstream", "simple", "current"]
+  end
+
+  def current_branch
+    result = %x{git branch}.split("\n")
+    if result.empty?
+      feedback "It seems your app is not a git repository."
+    else
+      result.select { |b| b =~ /^\*/ }.first.split(" ").last.strip
+    end
+  end
+
+  def reject_forcepush
+    messages = ["Your attempt to FORCE PUSH has been rejected. You can't force push to master or staging"]
+    messages << "If you still want to FORCE PUSH then you need to ignore the pre_push git hook by executing following command."
+    messages << "git push master --force --no-verify"
+    feedback messages
+  end
+
+  def reject_bad_default
+    current = push_default
+    allowed = allowed_push_defaults
+    url = "http://rakhesh.com/coding/git-push-default/"
+    messages = ["Your PUSH has been rejected because of your `push.default` value"]
+    messages << "It's currently `#{current}`"
+    messages << "Set it to one of #{allowed}"
+    messages << "See #{url} for an explanation of these values"
+    messages << "You can change this in your ~/.gitconfig file"
+    feedback messages
+  end
+
+  def forced_push?
+    ppid = Process.ppid
+    cmd = "ps -ocommand= -p #{ppid}"
+    output = `#{cmd}`
+    output.match(/--force|-f/)
+  end
+
+  def bad_push_default?
+    not allowed_push_defaults.include? push_default
+  end
+
+  def push_default
+    cmd = "git config --get push.default"
+    `#{cmd}`.strip
+  end
+
+  def feedback messages
+    puts "*"*40
+    [messages].flatten.each do |message|
+      puts message
+    end
+    puts "*"*40
+
+    exit 1
+  end
+end
+
+PrePushHandler.new.handle

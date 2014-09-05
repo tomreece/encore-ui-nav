@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# Pre-commit hooks
+
+# Lint stuff before committing
+
+FILES_PATTERN='\.js(\..+)?$'
+
+# Quit if on master or staging
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [[ $BRANCH = "master" || $BRANCH = "staging" ]]; then
+    exit 0
+fi

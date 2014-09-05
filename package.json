@@ -1,8 +1,20 @@
 {
     "author": "",
     "name": "encore-ui-nav",
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:rackerlabs/encore-ui-nav.git"
+    },
     "homepage": "https://github.com/rackerlabs/encore-ui-nav",
+    "scripts": {
+        "postinstall": "grunt hooks"
+    },
     "devDependencies": {
-        "jsonlint": "~1.6.2"
+        "glob": "3.2.11",
+        "grunt": "0.4.5",
+        "jsonlint": "1.6.2",
+        "grunt-cloudfiles": "0.3.0",
+        "load-grunt-tasks": "0.4.0",
+        "lodash": "2.4.1"
     }
 }

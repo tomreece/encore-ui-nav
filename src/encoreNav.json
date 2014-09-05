@@ -5,6 +5,7 @@
         "key": "accountLvlTools",
         "directive": "rx-account-search",
         "childVisibilityParam": "accountNumber",
+        "childHeader": "<strong class='current-search'>Current Account:</strong><span class='current-result'>#{{route.current.pathParams.accountNumber}}</span>",
         "children": [
             {
                 "href": "/accounts/{{accountNumber}}",
@@ -129,7 +130,6 @@
     }, {
         "linkText": "Support Automation",
         "key": "supportAutomation",
-        "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
         "children": [
             {
                 "href": "/dcx/windows-cluster-build/validate",
