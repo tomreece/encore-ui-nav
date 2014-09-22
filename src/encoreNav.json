@@ -4,7 +4,7 @@
         "linkText": "Account",
         "key": "accountLvlTools",
         "directive": "rx-account-search",
-        "childVisibility": { "methodName": "rxPathParams", "args": { "param": "accountNumber" } },
+        "childVisibility": ["rxPathParams", { "param": "accountNumber" }],
         "childHeader": "<strong class='current-search'>Current Account:</strong><span class='current-result'>#{{route.current.pathParams.accountNumber}}</span>",
         "children": [
             {
@@ -16,7 +16,7 @@
                 "linkText": "Billing",
                 "key": "accountBilling",
                 "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
-                "childVisibility": { "methodName": "rxPathParams", "args": { "param": "accountNumber" } },
+                "childVisibility": ["rxPathParams", { "param": "accountNumber" }],
                 "children": [
                     {
                         "href": "/billing/overview/{{accountNumber}}",
@@ -61,7 +61,7 @@
         "linkText": "Cloud",
         "key": "cloud",
         "directive": "rx-atlas-search",
-        "childVisibility":  { "methodName": "rxPathParams", "args": { "param": "user" } },
+        "childVisibility":  ["rxPathParams", { "param": "user" }],
         "childHeader": "<strong class='current-search'>Current Account:</strong><span class='current-result'>{{route.current.pathParams.user}}</span>",
         "children": [
             {
@@ -138,3 +138,4 @@
         ]
     }]
 }]
+
