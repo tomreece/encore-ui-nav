@@ -21,10 +21,14 @@ var baseConfig = {
 var staging = _.cloneDeep(baseConfig);
 staging.upload[0].container = 'encore-ui-nav-staging';
 
+var preprod = _.cloneDeep(baseConfig);
+preprod.upload[0].container = 'encore-ui-nav-preprod';
+
 var production = _.cloneDeep(baseConfig);
 production.upload[0].container= 'encore-ui-nav';
 
 module.exports = {
     staging: staging,
+    preprod: preprod,
     production: production
 };
