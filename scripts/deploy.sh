@@ -12,6 +12,10 @@ elif [[ $TRAVIS_BRANCH = "staging" && $TRAVIS_PULL_REQUEST = "false" ]]
 then
     echo "Deploying to staging"
     grunt cloudfiles:staging
+elif [[ $TRAVIS_BRANCH = "preprod" && $TRAVIS_PULL_REQUEST = "false" ]]
+then
+    echo "Deploying to preprod"
+    grunt cloudfiles:preprod
 else
     echo "Not deploying"
     printf "TRAVIS_BRANCH is %s\n" "$TRAVIS_BRANCH"
