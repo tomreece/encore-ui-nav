@@ -23,3 +23,11 @@ Visibility
 Please keep the `visibility` values for your nav menu items in mind. If you're putting a new nav item into `staging` so you can start your development work, remember that other teams might need to shortly thereafter bring `staging` into `master` to deploy to production. We don't want your nav items to start appearing in the production enviroment when you're not ready for it.
 
 When you're getting ready to move your items from `staging` to production, you'll want to first do a new `staging` PR that removes the `visibility` restrictions for your item. Once this has been deployed to `staging` and you've tested that your nav items still work locally, you can prepare a new production release against the updated `staging` branch.
+
+Access-Control-Allow-Origin
+===========================
+In EncoreUI, we load these JSON files via an XMLHttpRequest. Because of [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS), we need to have an `Access-Control-Allow-Origin` header on the JSON files.
+
+In [our cloudfiles configuration file](./grunt-tasks/options/cloudfiles.js), we set this header on each JSON file whenever we deploy. We have to set it every time, because uploading a new version of an existing file will remove any headers that were already there.
+
+In the future, the preferred way to do this with the Rackspace CDN will be to have this header set at a container level, instead of an object level. Currently this is only doable via the Rackspace Cloud Files API, but it only needs to be done once, and has already been performed. It shouldn't need to be done again in the future, but I'm leaving this note here, just in case.
