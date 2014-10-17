@@ -45,6 +45,11 @@
                     }
                 ]
             }, {
+                "href": "/support/events/{{accountNumber}}",
+                "linkText": "Events",
+                "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
+                "key": "accountEvents"
+            }, {
                 "href": "/support/accounts/{{accountNumber}}",
                 "linkText": "Support Details",
                 "key": "accountSupport"
