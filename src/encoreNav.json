@@ -5,7 +5,7 @@
         "key": "accountLvlTools",
         "directive": "rx-account-search",
         "childVisibility": ["rxPathParams", { "param": "accountNumber" }],
-        "childHeader": "<strong class='current-search'>Current Account:</strong><span class='current-result'>#{{route.current.pathParams.accountNumber}}</span>",
+        "childHeader": "<strong class='current-search'>Current Account:</strong><span class='current-result'>#{{route.current.pathParams.accountNumber}}</span> <rx-account-users></rx-account-users>",
         "children": [
             {
                 "href": "/accounts/{{accountNumber}}",
@@ -45,6 +45,34 @@
                     }
                 ]
             }, {
+                "linkText": "Cloud",
+                "key": "cloud",
+                "childVisibility":  ["rxPathParams", { "param": "accountNumber" }],
+                "children": [
+                    {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/servers",
+                        "linkText": "Cloud Servers"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/images",
+                        "linkText": "Cloud Server Images"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/cbs/volumes",
+                        "linkText": "Block Storage Volumes"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/cbs/snapshots",
+                        "linkText": "Block Storage Snapshots"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/databases/instances",
+                        "linkText": "Databases"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/loadbalancers",
+                        "linkText": "Load Balancers"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/networks",
+                        "linkText": "Networks"
+                    }
+                ]
+            }, {
                 "href": "/support/events/{{accountNumber}}",
                 "linkText": "Events",
                 "key": "accountEvents"
@@ -62,49 +90,6 @@
         "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)"
     },
     {
-        "linkText": "Cloud",
-        "key": "cloud",
-        "directive": "rx-atlas-search",
-        "childVisibility":  ["rxPathParams", { "param": "user" }],
-        "childHeader": "<strong class='current-search'>Current Account:</strong><span class='current-result'>{{route.current.pathParams.user}}</span>",
-        "children": [
-            {
-                "href": "/cloud/{{user}}/servers",
-                "linkText": "Cloud Servers",
-                "children": [
-                    {
-                        "href": "/cloud/{{user}}/servers",
-                        "linkText": "Servers"
-                    }, {
-                        "href": "/cloud/{{user}}/images",
-                        "linkText": "Images"
-                    }
-                ]
-            },
-            {
-                "href": "/cloud/{{user}}/cbs/volumes",
-                "linkText": "Block Storage",
-                "children": [
-                    {
-                        "href": "/cloud/{{user}}/cbs/volumes",
-                        "linkText": "Volumes"
-                    }, {
-                        "href": "/cloud/{{user}}/cbs/snapshots",
-                        "linkText": "Snapshots"
-                    }
-                ]
-            }, {
-                "href": "/cloud/{{user}}/databases/instances",
-                "linkText": "Databases"
-            }, {
-                "href": "/cloud/{{user}}/loadbalancers",
-                "linkText": "Load Balancers"
-            }, {
-                "href": "/cloud/{{user}}/networks",
-                "linkText": "Networks"
-            }
-        ]
-    }, {
         "href": "/support",
         "linkText": "Support Service",
         "key": "supportService",
