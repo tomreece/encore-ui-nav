@@ -45,6 +45,10 @@
                     }
                 ]
             }, {
+                "href": "/support/events/{{accountNumber}}",
+                "linkText": "Events",
+                "key": "accountEvents"
+            }, {
                 "href": "/support/accounts/{{accountNumber}}",
                 "linkText": "Support Details",
                 "key": "accountSupport"
