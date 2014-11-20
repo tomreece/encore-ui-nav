@@ -95,7 +95,6 @@
         "key": "supportService",
         "directive": "rx-support-service-search"
     }, {
-        "href": "/ticketing",
         "linkText": "Ticketing",
         "key": "ticketing",
         "children": [
