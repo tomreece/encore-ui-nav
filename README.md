@@ -8,7 +8,9 @@ Workflow
 
 `encore-ui-nav` is responsible for pushing a JSON file to three different Cloud Files containers, named `encore-ui-nav-staging`, `encore-ui-nav-preprod`, and `encore-ui-nav`. The first is used for adding new items to the navigation menu during development, the second is to test in a preprod environment, and the last is the container that our various products will use in production.
 
-When you need to add a new item to `encoreNav.json`, create a branch off of `staging` and send us a pull request. Once this pull request gets merged, an updated version of `encoreNav.json` will get deployed to the `encore-ui-nav-staging` container. It takes ~5-15 minutes for the CDN to be updated with the new version.
+You can try out a local version of the JSON file by following the instructions here http://rackerlabs.github.io/encore-ui/#/component/configs. This will let you get the file looking how you want it before sending a pull request. 
+
+When you are happy with your local changes to `encoreNav.json`, create a branch off of `staging` and send us a pull request. Once this pull request gets merged, an updated version of `encoreNav.json` will get deployed to the `encore-ui-nav-staging` container. It takes ~5-15 minutes for the CDN to be updated with the new version.
 
 When you are happy with your work in staging and are ready to move to preprod, create a PR against the `preprod` branch. Ideally this PR will be based on the current `staging` branch. When this PR gets merged in, the `encore-ui-nav-preprod` container will automatically be updated.
 
