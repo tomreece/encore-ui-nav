@@ -123,6 +123,12 @@
             {
                 "href": "/dcx/windows-cluster-build/validate",
                 "linkText": "Windows Cluster Build"
+            }, {
+                "href": "/dcx/esx-rekick",
+                "linkText": "ESX Rekick",
+                "key": "esxRekick",
+                "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
+                "directive": "esx-rekick-search"
             }
         ]
     }]
