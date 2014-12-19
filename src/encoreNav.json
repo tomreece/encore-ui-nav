@@ -77,6 +77,10 @@
                 "linkText": "Events",
                 "key": "accountEvents"
             }, {
+                "href": "/accounts/reports/{{accountNumber}}/",
+                "linkText": "Reports",
+                "key": "accountReports"
+            }, {
                 "href": "/support/accounts/{{accountNumber}}",
                 "linkText": "Support Details",
                 "key": "accountSupport"
