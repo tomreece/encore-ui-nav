@@ -15,7 +15,6 @@
             {
                 "linkText": "Billing",
                 "key": "accountBilling",
-                "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
                 "childVisibility": ["rxPathParams", { "param": "accountNumber" }],
                 "children": [
                     {
@@ -90,8 +89,7 @@
     {
         "linkText": "Billing",
         "key": "billing",
-        "directive": "rx-billing-search",
-        "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)"
+        "directive": "rx-billing-search"
     },
     {
         "href": "/support",
