@@ -127,6 +127,12 @@
                 "linkText": "Windows Cluster Build",
                 "key": "wcb",
                 "directive": "wcb-search"
+            }, {
+                "href": "/dcx/esx-rekick",
+                "linkText": "ESX Rekick",
+                "key": "esxRekick",
+                "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
+                "directive": "esx-rekick-search"
             }
         ]
     }]
