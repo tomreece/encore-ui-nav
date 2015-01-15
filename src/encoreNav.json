@@ -83,7 +83,9 @@
         "children": [
             {
                 "href": "/dcx/windows-cluster-build/validate",
-                "linkText": "Windows Cluster Build"
+                "linkText": "Windows Cluster Build",
+                "key": "wcb",
+                "directive": "wcb-search"
             }, {
                 "href": "/dcx/esx-rekick",
                 "linkText": "ESX Rekick",
