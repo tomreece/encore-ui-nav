@@ -11,38 +11,6 @@
                 "href": "/accounts/{{accountNumber}}",
                 "key": "accountOverview",
                 "linkText": "Overview"
-            },
-            {
-                "linkText": "Billing",
-                "key": "accountBilling",
-                "childVisibility": ["rxPathParams", { "param": "accountNumber" }],
-                "children": [
-                    {
-                        "href": "/billing/overview/{{accountNumber}}",
-                        "key": "accountBillingOverview",
-                        "linkText": "Overview"
-                    }, {
-                        "href": "/billing/transactions/{{accountNumber}}",
-                        "key": "accountBillingTransactions",
-                        "linkText": "Transactions"
-                    }, {
-                        "href": "/billing/usage/{{accountNumber}}",
-                        "key": "accountBillingCurrentUsage",
-                        "linkText": "Current Usage"
-                    }, {
-                        "href": "/billing/payment/{{accountNumber}}/options",
-                        "key": "accountBillingPaymentOptions",
-                        "linkText": "Payment Options"
-                    }, {
-                        "href": "/billing/purchase-orders/{{accountNumber}}",
-                        "key": "accountBillingPurchaseOrders",
-                        "linkText": "Purchase Orders"
-                    }, {
-                        "href": "/billing/preferences/{{accountNumber}}",
-                        "key": "accountBillingPreferences",
-                        "linkText": "Preferences"
-                    }
-                ]
             }, {
                 "linkText": "Cloud",
                 "key": "cloud",
@@ -87,11 +55,6 @@
         ]
     },
     {
-        "linkText": "Billing",
-        "key": "billing",
-        "directive": "rx-billing-search"
-    },
-    {
         "href": "/support",
         "linkText": "Support Service",
         "key": "supportService",
@@ -131,7 +94,6 @@
                 "href": "/dcx/esx-rekick",
                 "linkText": "ESX Rekick",
                 "key": "esxRekick",
-                "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
                 "directive": "esx-rekick-search"
             }
         ]
