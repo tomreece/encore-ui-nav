@@ -87,9 +87,12 @@
         ]
     },
     {
-        "linkText": "Billing",
+        "linkText": "Billing Search (Alpha)",
         "key": "billing",
-        "directive": "rx-billing-search"
+        "directive": "rx-billing-search",
+        "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
+        "children": [{}],
+        "childVisibility": false
     },
     {
         "href": "/support",
