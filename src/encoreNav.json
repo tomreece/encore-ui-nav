@@ -15,7 +15,7 @@
             {
                 "linkText": "Billing",
                 "key": "accountBilling",
-                "childVisibility": ["rxPathParams", { "param": "accountNumber" }],
+                "visibility": ["rxHideIfUkAccount"],
                 "children": [
                     {
                         "href": "/billing/overview/{{accountNumber}}",
@@ -87,7 +87,8 @@
         ]
     },
     {
-        "linkText": "Billing",
+        "href": "/billing/search",
+        "linkText": "Billing Search (Alpha)",
         "key": "billing",
         "directive": "rx-billing-search"
     },
