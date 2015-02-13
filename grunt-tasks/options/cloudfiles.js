@@ -12,7 +12,7 @@ var baseConfig = {
         'stripcomponents': 1,
         'headers': { 'Access-Control-Allow-Origin': '*'},
         'purge': {
-            'emails': ['jay.parlar@rackspace.com'],
+            'emails': ['jay.parlar@rackspace.com', 'chris.cantu@rackspace.com'],
             'files': glob.sync('*.json', { cwd: 'src' })
         }
     }]
