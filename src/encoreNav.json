@@ -11,6 +11,38 @@
                 "href": "/accounts/{{accountNumber}}",
                 "key": "accountOverview",
                 "linkText": "Overview"
+            },
+            {
+                "linkText": "Billing",
+                "key": "accountBilling",
+                "visibility": ["rxHideIfUkAccount"],
+                "children": [
+                    {
+                        "href": "/billing/overview/{{accountNumber}}",
+                        "key": "accountBillingOverview",
+                        "linkText": "Overview"
+                    }, {
+                        "href": "/billing/transactions/{{accountNumber}}",
+                        "key": "accountBillingTransactions",
+                        "linkText": "Transactions"
+                    }, {
+                        "href": "/billing/usage/{{accountNumber}}",
+                        "key": "accountBillingCurrentUsage",
+                        "linkText": "Current Usage"
+                    }, {
+                        "href": "/billing/payment/{{accountNumber}}/options",
+                        "key": "accountBillingPaymentOptions",
+                        "linkText": "Payment Options"
+                    }, {
+                        "href": "/billing/purchase-orders/{{accountNumber}}",
+                        "key": "accountBillingPurchaseOrders",
+                        "linkText": "Purchase Orders"
+                    }, {
+                        "href": "/billing/preferences/{{accountNumber}}",
+                        "key": "accountBillingPreferences",
+                        "linkText": "Preferences"
+                    }
+                ]
             }, {
                 "linkText": "Cloud",
                 "key": "cloud",
@@ -53,6 +85,12 @@
                 "key": "accountSupport"
             }
         ]
+    },
+    {
+        "href": "/billing/search",
+        "linkText": "Billing Search (Alpha)",
+        "key": "billing",
+        "directive": "rx-billing-search"
     },
     {
         "href": "/support",
