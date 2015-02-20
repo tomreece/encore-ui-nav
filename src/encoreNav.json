@@ -134,6 +134,11 @@
                 "key": "esxRekick",
                 "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
                 "directive": "esx-rekick-search"
+            }, {
+                "href": "/dcx/load-balancer-service",
+                "linkText": "Load Balancer Service",
+                "key": "lbs",
+                "directive": "lbs-search"
             }
         ]
     }]
