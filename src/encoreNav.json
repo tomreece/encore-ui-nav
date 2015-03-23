@@ -112,9 +112,23 @@
             {
                 "href": "/ticketing/my",
                 "linkText": "My Tickets"
-            }, {
-                "href": "/ticketing/queues",
-                "linkText": "Queue Admin"
+            },
+            {
+                "href": "/ticketing/history",
+                "linkText": "My Ticket History"
+            },
+            {
+                "linkText": "Ticketing Admin",
+                "children": [
+                    {
+                        "href": "/ticketing/queues",
+                        "linkText": "Queue Admin"
+                    },
+                    {
+                        "href": "/ticketing/preferences",
+                        "linkText": "Default Preferences"
+                    }
+                ]
             }
         ]
     }, {
