@@ -101,6 +101,10 @@
                     {
                         "href": "/ticketing/preferences",
                         "linkText": "Default Preferences"
+                    },
+                    {
+                        "href": "/mass-ticketing",
+                        "linkText": "Mass Ticketing"
                     }
                 ]
             }
