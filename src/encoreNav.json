@@ -101,7 +101,6 @@
         "key": "supportService",
         "directive": "rx-support-service-search"
     }, {
-        "href": "/ticketing",
         "linkText": "Ticketing",
         "key": "ticketing",
         "children": [
@@ -112,9 +111,27 @@
             {
                 "href": "/ticketing/my",
                 "linkText": "My Tickets"
-            }, {
-                "href": "/ticketing/queues",
-                "linkText": "Queue Admin"
+            },
+            {
+                "href": "/ticketing/history",
+                "linkText": "My Ticket History"
+            },
+            {
+                "linkText": "Ticketing Admin",
+                "children": [
+                    {
+                        "href": "/ticketing/queues",
+                        "linkText": "Queue Admin"
+                    },
+                    {
+                        "href": "/ticketing/preferences",
+                        "linkText": "Default Preferences"
+                    },
+                    {
+                        "href": "/mass-ticketing",
+                        "linkText": "Mass Ticketing"
+                    }
+                ]
             }
         ]
     }, {
