@@ -124,7 +124,22 @@
         "href": "/virt",
         "linkText": "Virtualization Admin",
         "key": "virt",
-        "directive": "rx-virt-search"
+        "directive": "rx-virt-search",
+        "children": [
+            {
+                "href": "/virt/{{type}}vcenters",
+                "linkText": "vCenters"
+            }, {
+                "href": "/virt/{{type}}hypervisor-clusters",
+                "linkText": "Hypervisor Clusters"
+            }, {
+                "href": "/virt/{{type}}hypervisors",
+                "linkText": "Hypervisors"
+            }, {
+                "href": "/virt/{{type}}vms",
+                "linkText": "VMs"
+            }
+        ]
     }, {
         "linkText": "Support Automation",
         "key": "supportAutomation",
