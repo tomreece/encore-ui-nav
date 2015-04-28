@@ -109,7 +109,6 @@
             }
         ]
     }, {
-        "href": "/virt",
         "linkText": "Virtualization Admin",
         "key": "virt",
         "directive": "rx-virt-search"
