@@ -92,11 +92,19 @@
                 "linkText": "My Ticket History"
             },
             {
+                "href": "/ticketing/search",
+                "linkText": "Advanced Ticket Search"
+            },
+            {
                 "linkText": "Ticketing Admin",
                 "children": [
                     {
                         "href": "/ticketing/queues",
                         "linkText": "Queue Admin"
+                    },
+                    {
+                        "href": "/ticketing/presets",
+                        "linkText": "Preset Admin"
                     },
                     {
                         "href": "/ticketing/preferences",
