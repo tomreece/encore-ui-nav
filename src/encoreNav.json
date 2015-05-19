@@ -57,6 +57,10 @@
                 "linkText": "Reports",
                 "key": "accountReports"
             }, {
+                "href": "/ticketing/account/{{accountNumber}}",
+                "linkText": "Tickets",
+                "key": "accountTickets"
+            }, {
                 "href": "/support/accounts/{{accountNumber}}",
                 "linkText": "Support Details",
                 "key": "accountSupport"
@@ -91,11 +95,19 @@
                 "linkText": "My Ticket History"
             },
             {
+                "href": "/ticketing/search",
+                "linkText": "Advanced Ticket Search"
+            },
+            {
                 "linkText": "Ticketing Admin",
                 "children": [
                     {
                         "href": "/ticketing/queues",
                         "linkText": "Queue Admin"
+                    },
+                    {
+                        "href": "/ticketing/presets",
+                        "linkText": "Preset Admin"
                     },
                     {
                         "href": "/ticketing/preferences",
