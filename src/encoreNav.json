@@ -74,6 +74,49 @@
         "directive": "rx-billing-search"
     },
     {
+        "linkText": "DCX",
+        "key": "dcx",
+        "children": [
+            {
+                "href": "/dcx/infrastructure",
+                "linkText": "Infrastructure Manager",
+                "key": "infrastructure",
+                "children": [
+                    {
+                        "href": "/dcx/infrastructure/cells",
+                        "linkText": "Cells",
+                        "key": "cells"
+                    },
+                    {
+                        "href": "/dcx/infrastructure/containers",
+                        "linkText": "Containers",
+                        "key": "containers"
+                    },
+                    {
+                        "href": "/dcx/infrastructure/deployments",
+                        "linkText": "Deployments",
+                        "key": "deployments"
+                    }
+                ]
+            }, {
+                "href": "/dcx/windows-cluster-build/validate",
+                "linkText": "Windows Cluster Build",
+                "key": "wcb",
+                "directive": "wcb-search"
+            }, {
+                "href": "/dcx/esx-rekick",
+                "linkText": "ESX Rekick",
+                "key": "esxRekick",
+                "directive": "esx-rekick-search"
+            }, {
+                "href": "/dcx/load-balancer-service",
+                "linkText": "Load Balancer Service",
+                "key": "lbs",
+                "directive": "lbs-search"
+            }
+        ]
+    },
+    {
         "href": "/support",
         "linkText": "Support Service",
         "key": "supportService",
@@ -137,28 +180,6 @@
             }, {
                 "href": "/virt/{{type}}vms",
                 "linkText": "VMs"
-            }
-        ]
-    }, {
-        "linkText": "Support Automation",
-        "key": "supportAutomation",
-        "children": [
-            {
-                "href": "/dcx/windows-cluster-build/validate",
-                "linkText": "Windows Cluster Build",
-                "key": "wcb",
-                "directive": "wcb-search"
-            }, {
-                "href": "/dcx/esx-rekick",
-                "linkText": "ESX Rekick",
-                "key": "esxRekick",
-                "visibility": "('unified-preprod' | rxEnvironmentMatch) || ('local' | rxEnvironmentMatch)",
-                "directive": "esx-rekick-search"
-            }, {
-                "href": "/dcx/load-balancer-service",
-                "linkText": "Load Balancer Service",
-                "key": "lbs",
-                "directive": "lbs-search"
             }
         ]
     }]
