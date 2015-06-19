@@ -71,11 +71,27 @@
         ]
     },
     {
-        "href": "/billing/search",
-        "linkText": "Billing Search (Alpha)",
-        "key": "billing",
-        "directive": "rx-billing-search",
-        "childVisibility": false
+        "linkText": "Billing",
+        "key": "BillingTools",
+        "children": [
+            {
+                "linkText": "Adjustment Credit Transaction",
+                "key": "act",
+                "children": [
+                    {
+                        "href": "/adjustment-credit/create",
+                        "linkText": "Create Adjustment Request",
+                        "key": "createAdjustment"
+                    }
+                ]
+            }, {
+                "href": "/billing/search",
+                "linkText": "Billing Search (Alpha)",
+                "key": "billing",
+                "directive": "rx-billing-search",
+                "childVisibility": false
+            }
+        ]
     },
     {
         "linkText": "DCX",
