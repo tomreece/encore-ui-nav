@@ -147,6 +147,7 @@
     }, {
         "linkText": "Ticketing",
         "key": "ticketing",
+        "childVisibility": ["ticketingVisibility"],
         "children": [
             {
                 "href": "/ticketing/list",
