@@ -53,15 +53,15 @@ Once this pull request gets merged, an updated version of `encoreNav.json` will 
 
 After your staging PR has been deployed, it is time to add your navigation items to our preprod environment.
 
-Create a PR against the latest `preprod` branch, `git checkout -b my-preprod-branch-name preprod`, and use `git cherry-pick` to bring your commit from `my-staging-branch-name` into `my-preprod-branch-name`. 
+Create a PR against the latest `preprod` branch, `git checkout -b my-preprod-branch-name preprod`, and use `git cherry-pick` to bring your commit from `my-staging-branch-name` into `my-preprod-branch-name`.
 
-Send this branch to us as a PR, with the PR targetted against `preprod` (make sure that at the top of the "Open a pull request" screen, you choose "base: preprod"), and when we merge it we will deploy it to the `encore-ui-nav-preprod` container.
+Send this branch to us as a PR, with the PR targeted against `preprod` (make sure that at the top of the "Open a pull request" screen, you choose "base: preprod"), and when we merge it we will deploy it to the `encore-ui-nav-preprod` container.
 
 *NOTE:* Make sure you have your actual application code already deployed to `preprod.encore.rackspace.com` before you ask us to deploy the new preprod nav menu.
 
 ### Creating a production PR
 
-After you've verified that the `preprod` branch is working as expected, and you're ready to release your application into production, create a `my-production-branch-name` branch off of `master`, and use `git cherry-pick` to bring your commit from `my-preprod-branch-name` into `my-production-branch-bame` branch. Push it to github, and create a `PR` against `master` (make sure that at the top of the "Open a pull request" screen, you choose "base: master"). When we merge this PR, it will automatically update the production container at `encore-ui-nav`.
+After you've verified that the `preprod` branch is working as expected, and you're ready to release your application into production, create a `my-production-branch-name` branch off of `master`, and use `git cherry-pick` to bring your commit from `my-preprod-branch-name` into `my-production-branch-name` branch. Push it to github, and create a `PR` against `master` (make sure that at the top of the "Open a pull request" screen, you choose "base: master"). When we merge this PR, it will automatically update the production container at `encore-ui-nav`.
 
 Remember that when pushing a new version of the file to the CDN container, it will take ~5-15 minutes before the new version is visible on the CDN.
 
@@ -94,7 +94,7 @@ For example, part of the JSON looks like this:
 This is saying that the navigation menu should have a "Ticketing" item (defined by `linkText`), which when clicked will expand and contain `"My Selected Queues`" and `"My Tickets"` items.
 
 For full details on the allowed syntax, see the "Navigation Menu JSON Structure" section of [http://rackerlabs.github.io/encore-ui/#/component/rxApp](http://rackerlabs.github.io/encore-ui/#/component/rxApp).
- 
+
 Access-Control-Allow-Origin
 ===========================
 In EncoreUI, we load these JSON files via an XMLHttpRequest. Because of [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS), we need to have an `Access-Control-Allow-Origin` header on the JSON files.
