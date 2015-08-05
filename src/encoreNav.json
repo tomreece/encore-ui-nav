@@ -50,6 +50,9 @@
                         "href": "/cloud/{{accountNumber}}/{{user}}/cdn/services",
                         "linkText": "CDN Services"
                     }, {
+                        "href":"/cloud/files/{{accountNumber}}/{{user}}",
+                        "linkText": "Cloud Files"
+                    }, {
                         "href":"/cloud/{{accountNumber}}/{{user}}/backup",
                         "linkText": "Cloud Backup"
                     }, {
