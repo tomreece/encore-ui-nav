@@ -49,6 +49,9 @@
                     }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/cdn/services",
                         "linkText": "CDN Services"
+                    },  {
+                        "href":"/cloud/files/{{accountNumber}}/{{user}}",
+                        "linkText": "Cloud Files"
                     }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/heat",
                         "linkText": "Cloud Orchestration (Heat)"
