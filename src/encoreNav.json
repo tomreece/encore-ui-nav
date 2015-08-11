@@ -53,6 +53,9 @@
                         "href":"/cloud/files/{{accountNumber}}/{{user}}",
                         "linkText": "Cloud Files"
                     }, {
+                        "href":"/cloud/{{accountNumber}}/{{user}}/backup",
+                        "linkText": "Cloud Backup"
+                    }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/heat",
                         "linkText": "Cloud Orchestration (Heat)"
                     }
