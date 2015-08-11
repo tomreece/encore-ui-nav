@@ -35,6 +35,9 @@
                         "href": "/cloud/{{accountNumber}}/{{user}}/cbs/snapshots",
                         "linkText": "Block Storage Snapshots"
                     }, {
+                        "href":"/cloud/monitoring/{{accountNumber}}/{{user}}",
+                        "linkText": "Cloud Monitoring"
+                    }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/databases/instances",
                         "linkText": "Databases"
                     }, {
