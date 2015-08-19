@@ -168,6 +168,10 @@
                 "linkText": "My Tickets"
             },
             {
+                "href": "/ticketing/my-customers",
+                "linkText": "My Customers' Tickets"
+            },
+            {
                 "href": "/ticketing/history",
                 "linkText": "My Ticket History"
             },
