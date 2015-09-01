@@ -58,6 +58,9 @@
                     }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/heat",
                         "linkText": "Cloud Orchestration (Heat)"
+                    }, {
+                        "href": "/cloud/dns/{{accountNumber}}/{{user}}",
+                        "linkText": "Cloud DNS"
                     }
                 ]
             }, {
