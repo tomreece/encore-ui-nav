@@ -47,6 +47,9 @@
                         "href": "/cloud/{{accountNumber}}/{{user}}/networks",
                         "linkText": "Networks"
                     }, {
+                        "href": "/cloud/dns/{{accountNumber}}/{{user}}",
+                        "linkText": "DNS"
+                    }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/cdn/services",
                         "linkText": "CDN Services"
                     },  {
@@ -58,9 +61,6 @@
                     }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/heat",
                         "linkText": "Cloud Orchestration (Heat)"
-                    }, {
-                        "href": "/cloud/dns/{{accountNumber}}/{{user}}",
-                        "linkText": "Cloud DNS"
                     }
                 ]
             }, {
