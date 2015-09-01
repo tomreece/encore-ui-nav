@@ -47,6 +47,9 @@
                         "href": "/cloud/{{accountNumber}}/{{user}}/networks",
                         "linkText": "Networks"
                     }, {
+                        "href": "/cloud/dns/{{accountNumber}}/{{user}}",
+                        "linkText": "DNS"
+                    }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/cdn/services",
                         "linkText": "CDN Services"
                     }, {
