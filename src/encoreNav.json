@@ -139,6 +139,7 @@
     }, {
         "linkText": "Ticketing",
         "key": "ticketing",
+        "directive": "rx-jump-to-ticket",
         "children": [
             {
                 "href": "/ticketing/list",
