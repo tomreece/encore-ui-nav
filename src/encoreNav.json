@@ -92,6 +92,60 @@
         "linkText": "DCX",
         "key": "dcx",
         "children": [
+            {        
+                "href": "/dcx/torq",
+                "linkText": "Torq",
+                "key": "torq",
+                "children": [
+                    {
+                        "href": "/dcx/torq/release_notes",
+                        "linkText": "Release Notes",
+                        "key": "releaseNotes"
+                    },
+                    {
+                        "href": "/dcx/torq/kick",
+                        "linkText": "FireKick",
+                        "key": "kick",
+                        "children": [
+                            {
+                                "href": "/dcx/torq/kick/templates",
+                                "linkText": "Templates",
+                                "key": "templates"
+                            },
+                            {
+                                "href": "/dcx/torq/kick/variables",
+                                "linkText": "Variables",
+                                "key": "variables"
+                            }
+                        ]
+                    },
+                    {
+                        "href": "/dcx/torq/devices",
+                        "linkText": "Devices",
+                        "key": "devices"
+                    },
+                    {
+                        "href": "/dcx/torq/reports",
+                        "linkText": "Reports",
+                        "key": "reports"
+                    },
+                    {
+                        "href": "/dcx/torq/backup_jobs",
+                        "linkText": "Backup Jobs",
+                        "key": "backup_jobs"
+                    },
+                    {
+                        "href": "/dcx/torq/netsec_files",
+                        "linkText": "Netsec Files",
+                        "key": "netsec_files"
+                    },
+                    {
+                        "href": "/dcx/torq/update_jobs",
+                        "linkText": "Update Jobs",
+                        "key": "update_jobs"
+                    }
+                ]
+            },
             {
                 "href": "/dcx/infrastructure",
                 "linkText": "Infrastructure Manager",
