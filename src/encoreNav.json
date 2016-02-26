@@ -22,36 +22,15 @@
                 "key": "cloud",
                 "childVisibility":  ["rxPathParams", { "param": "accountNumber" }],
                 "children": [
-                    {    
+                    {
                         "href": "/cloud/apilimits/{{accountNumber}}/{{user}}",
                         "linkText": "API Limits"
-                    }, {
-                        "href": "/cloud/{{accountNumber}}/{{user}}/servers",
-                        "linkText": "Cloud Servers"
-                    }, {
-                        "href": "/cloud/{{accountNumber}}/{{user}}/images",
-                        "linkText": "Cloud Server Images"
                     }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/cbs/volumes",
                         "linkText": "Block Storage Volumes"
                     }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/cbs/snapshots",
                         "linkText": "Block Storage Snapshots"
-                    }, {
-                        "href":"/cloud/monitoring/{{accountNumber}}/{{user}}",
-                        "linkText": "Cloud Monitoring"
-                    }, {
-                        "href": "/cloud/{{accountNumber}}/{{user}}/databases/instances",
-                        "linkText": "Databases"
-                    }, {
-                        "href": "/cloud/{{accountNumber}}/{{user}}/loadbalancers",
-                        "linkText": "Load Balancers"
-                    }, {
-                        "href": "/cloud/{{accountNumber}}/{{user}}/networks",
-                        "linkText": "Networks"
-                    }, {
-                        "href": "/cloud/dns/{{accountNumber}}/{{user}}",
-                        "linkText": "DNS"
                     }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/cdn/services",
                         "linkText": "CDN Services"
@@ -62,8 +41,29 @@
                         "href":"/cloud/files/{{accountNumber}}/{{user}}",
                         "linkText": "Cloud Files"
                     }, {
+                        "href":"/cloud/monitoring/{{accountNumber}}/{{user}}",
+                        "linkText": "Cloud Monitoring"
+                    }, {
                         "href": "/cloud/{{accountNumber}}/{{user}}/heat",
                         "linkText": "Cloud Orchestration (Heat)"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/servers",
+                        "linkText": "Cloud Servers"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/images",
+                        "linkText": "Cloud Images"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/databases/instances",
+                        "linkText": "Databases"
+                    }, {
+                        "href": "/cloud/dns/{{accountNumber}}/{{user}}",
+                        "linkText": "DNS"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/loadbalancers",
+                        "linkText": "Load Balancers"
+                    }, {
+                        "href": "/cloud/{{accountNumber}}/{{user}}/networks",
+                        "linkText": "Networks"
                     }
                 ]
             }, {
