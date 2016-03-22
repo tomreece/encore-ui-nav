@@ -259,5 +259,14 @@
                 "linkText": "VMs"
             }
         ]
+    }, {
+        "linkText": "Admin Tools",
+        "key": "admin",
+        "children": [
+            {
+                "href": "/admin/recent-signups/list",
+                "linkText": "Recent Signups"
+            }
+        ]
     }]
 }]
