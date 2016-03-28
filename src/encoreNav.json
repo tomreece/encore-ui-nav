@@ -71,19 +71,9 @@
                 "linkText": "Events",
                 "key": "accountEvents"
             }, {
-                "linkText": "Logging & Reporting",
-                "key": "logReports",
-                "children": [
-                    {
-                        "href": "/accounts/reports/{{accountNumber}}/",
-                        "linkText": "Audit History",
-                        "key": "accountReports"
-                    },{
-                        "href": "/logging/{{accountNumber}}/",
-                        "linkText": "Encore Activity Log",
-                        "key": "encoreLogs"
-                    }
-                ]
+                "href": "/accounts/reports/{{accountNumber}}/",
+                "linkText": "Reports",
+                "key": "accountReports"
             }, {
                 "href": "/ticketing/account/{{accountNumber}}",
                 "linkText": "Tickets",
