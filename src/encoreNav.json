@@ -75,7 +75,7 @@
                 "key": "logReports",
                 "children": [
                     {
-                        "href": "/accounts/reports/{{accountNumber}}/",
+                        "href": "/accounts/reports/{{accountNumber}}/{{user}}",
                         "linkText": "Audit History",
                         "key": "accountReports"
                     },{
