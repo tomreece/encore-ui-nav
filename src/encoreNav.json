@@ -96,16 +96,43 @@
         ]
     },
     {
-        "href": "/billing/search",
-        "linkText": "Billing Search (Alpha)",
-        "key": "billing",
-        "directive": "rx-billing-search"
+        "linkText": "Billing",
+        "key": "BillingTools",
+        "children": [
+            {
+                "linkText": "Adjustment Credit Tool",
+                "key": "act",
+                "children": [
+                    {
+                        "href": "/adjustment-credit/create",
+                        "linkText": "Create Adjustment Request",
+                        "key": "createAdjustment"
+                    },
+                    {
+                        "href": "/adjustment-credit/myrequests",
+                        "linkText": "My Adjustment Requests",
+                        "key": "myAdjustments"
+                    },
+                    {
+                        "href": "/adjustment-credit/search",
+                        "linkText": "Search Adjustment Request",
+                        "key": "searchAdjustment"
+                    }
+                ]
+            }, {
+                "href": "/billing/search",
+                "linkText": "Billing Search (Alpha)",
+                "key": "billing",
+                "directive": "rx-billing-search",
+                "childVisibility": false
+            }
+        ]
     },
     {
         "linkText": "DCX",
         "key": "dcx",
         "children": [
-            {        
+            {
                 "href": "/dcx/torq",
                 "linkText": "Torq",
                 "key": "torq",
