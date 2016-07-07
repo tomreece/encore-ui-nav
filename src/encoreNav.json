@@ -208,16 +208,6 @@
                     }
                 ]
             }, {
-                "href": "/dcx/windows-cluster-build/validate",
-                "linkText": "Windows Cluster Build",
-                "key": "wcb",
-                "directive": "wcb-search"
-            }, {
-                "href": "/dcx/esx-rekick",
-                "linkText": "ESX Rekick",
-                "key": "esxRekick",
-                "directive": "esx-rekick-search"
-            }, {
                 "href": "/dcx/load-balancer-service",
                 "linkText": "Load Balancer Service",
                 "key": "lbs",
